@@ -452,6 +452,111 @@ body {
   letter-spacing: 1.5px; color: var(--gold-light); text-transform: uppercase;
 }
 
+/* ── J1 ── */
+.day-card--j1 {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+.j1-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  margin: 10px 0;
+}
+.j1-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #f0e0b0;
+  letter-spacing: 0.03em;
+}
+.j1-item span { color: #ffffff; }
+.j1-tournoi {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFD700;
+  border-top: 1px solid rgba(201,168,76,0.25);
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+  padding: 6px 0;
+  margin: 6px 0 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.j1-paf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+/* ── J2 ── */
+.day-card--j2 {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.35);
+}
+.j2-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 0.65rem;
+  color: #c9a84c;
+  margin: 8px 0;
+  letter-spacing: 0.04em;
+}
+.j2-meta-sep { color: rgba(201,168,76,0.3); }
+.wcq-badge {
+  margin: 8px 0;
+  border: 1px solid #c9a84c;
+  border-radius: 8px;
+  background: rgba(201,168,76,0.1);
+  box-shadow: 0 0 16px rgba(255,215,0,0.12);
+  padding: 10px 14px;
+}
+.wcq-inner { display: flex; align-items: center; gap: 10px; }
+.wcq-icon  { width: 30px; opacity: 0.9; }
+.wcq-flag  { width: 40px; margin-left: auto; }
+.wcq-text  { display: flex; flex-direction: column; gap: 2px; }
+.wcq-tier  { font-size: 0.58rem; color: #e0c97f; text-transform: uppercase; letter-spacing: 0.1em; }
+.wcq-title { font-size: 0.9rem; font-weight: 900; color: #FFD700; text-transform: uppercase; letter-spacing: 0.06em; }
+.wcq-sub   { font-size: 0.6rem; color: #c9a84c; }
+.j2-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 8px;
+}
+.j2-cta {
+  font-size: 0.68rem;
+  color: #c9a84c;
+  text-decoration: none;
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 6px;
+  padding: 4px 10px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.j2-cta:hover { background: rgba(201,168,76,0.1); }
+.j2-paf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid #c9a84c;
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+/* ── PAF PARTAGÉ ── */
+.paf-label { font-size: 0.65rem; color: #c9a84c; text-transform: uppercase; letter-spacing: 0.1em; }
+.paf-price { font-size: 0.95rem; font-weight: 900; color: #FFD700; }
+
 /* Badge bienvenue J1 */
 .welcome-badge {
   margin-bottom: 6px;
@@ -464,221 +569,169 @@ body {
   text-transform: uppercase;
 }
 
-/* Badge WCQ */
-.wcq-badge {
-  margin-top: 9px;
-  background: linear-gradient(135deg, rgba(20,32,90,.80), rgba(12,20,65,.55));
-  border: 1px solid rgba(42,157,143,.45);
-  border-left: 3px solid var(--turquoise);
-  padding: 7px 10px;
-}
-.wcq-top {
-  display: flex; align-items: center; gap: 7px; margin-bottom: 4px;
-}
-.wcq-logo-img {
-  height: 24px; width: auto; object-fit: contain; flex-shrink: 0;
-  filter: brightness(1.15) saturate(0.85);
-}
-.wcq-flag-img {
-  height: 15px; width: auto; border-radius: 2px;
-  flex-shrink: 0; margin-left: auto;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.15);
-}
-.wcq-info { flex: 1; }
-.wcq-tier {
-  font-family: 'Cinzel', serif; font-size: 9px;
-  letter-spacing: 2.5px; color: var(--turquoise);
-  text-transform: uppercase; display: block;
-}
-.wcq-title {
-  font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700;
-  letter-spacing: 1px; color: var(--gold-light);
-  display: block; margin-top: 2px;
-}
-.wcq-sub {
-  font-family: 'Rajdhani', sans-serif; font-size: 10px;
-  letter-spacing: 1px; color: rgba(240,208,128,.80);
-  display: block;
-}
-
-/* ══ RÉCOMPENSES ══ */
-.prizing-section {
+/* ── SECTION RÉCOMPENSES ── */
+.rewards-section {
   width: calc(100% - 56px);
   margin-top: 8px;
-  padding: 14px 14px 12px;
+  padding: 14px 20px;
   border: 1px solid rgba(200,150,12,.16);
   border-radius: 18px;
   background: rgba(10,7,1,.45);
   box-shadow: inset 0 0 30px rgba(0,0,0,.18);
 }
-
-.section-title {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
-}
-.section-title .line {
-  flex: 1; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200,150,12,.60), transparent);
-}
-.section-title .title-text {
-  font-family: 'Cinzel', serif; font-size: 12px;
-  letter-spacing: 5px; color: var(--gold-mid);
-  text-transform: uppercase; white-space: nowrap;
-}
-.section-title .crown { font-size: 11px; color: var(--gold-mid); }
-
-/* ══ RÉCOMPENSES — disposition horizontale ══ */
-.prizing-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.rewards-title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: #c9a84c;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
-.prize-row {
-  display: flex; align-items: center;
+/* ── PODIUM ── */
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   gap: 10px;
-  overflow: hidden; position: relative;
-  border: 1px solid rgba(200,150,12,.14);
-  border-radius: 16px;
-  min-height: 68px;
-  background: rgba(15,12,6,.72);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
 }
-.prize-row.champion {
-  grid-column: 1 / -1;
-  min-height: 96px;
-  align-items: stretch;
-  border-color: rgba(255,215,0,.56);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 0 22px rgba(255,215,0,.18);
+.reward-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 10px 8px;
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  gap: 6px;
 }
-.prize-row.champion .prize-row-rank {
-  width: 110px;
-  padding: 10px 10px;
+.reward-card--gold {
+  border: 1px solid #FFD700;
+  box-shadow: 0 0 18px rgba(255,215,0,0.2);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transform: translateY(-8px);
 }
-.prize-row.champion .prize-row-img {
-  width: 140px; height: 92px;
-}
-.prize-row.champion .prize-row-info {
-  padding: 14px 18px;
-}
-.prize-row.runner-up { border-color: rgba(160,160,160,.22); }
-.prize-row.third     { border-color: rgba(139,90,43,.28); }
+.reward-card--silver { border: 1px solid #c9a84c; }
+.reward-card--bronze { border: 1px solid rgba(201,168,76,0.35); }
 
-/* Colonne rang (gauche) */
-.prize-row-rank {
-  width: 88px; flex-shrink: 0;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 2px; padding: 8px 8px;
+.reward-rank {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  color: #9a8860;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
-.prize-row.champion  .prize-row-rank { background: linear-gradient(160deg, #5A3800, #C8960C 55%, #7B5800); }
-.prize-row.runner-up .prize-row-rank { background: linear-gradient(160deg, #262626, #686868 55%, #2E2E2E); }
-.prize-row.third     .prize-row-rank { background: linear-gradient(160deg, #3A1800, #7A4020 55%, #3A1800); }
+.reward-rank--gold { color: #FFD700; font-weight: 700; }
 
-.prize-row-crown {
-  font-size: 16px; line-height: 1;
-  color: rgba(255,240,150,.90);
-  filter: drop-shadow(0 0 6px rgba(255,215,0,.70));
-  margin-bottom: 2px;
+.reward-img { width: 80px; height: 80px; object-fit: contain; }
+.reward-card--gold .reward-img { width: 95px; height: 95px; }
+
+.reward-info { display: flex; flex-direction: column; gap: 2px; }
+.reward-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #e8d5a0;
+  line-height: 1.3;
 }
-.prize-row-label {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 10px; font-weight: 900;
-  letter-spacing: 1px; color: rgba(255,255,255,.95);
-  text-transform: uppercase; text-align: center;
-  line-height: 1.2;
-}
-.prize-row.champion .prize-row-label {
-  font-size: 11.5px;
-  color: #FFE566;
-  filter: drop-shadow(0 0 5px rgba(255,215,0,.55));
+.reward-feature { font-size: 0.58rem; color: #c9a84c; line-height: 1.3; }
+.reward-brand {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.55rem;
+  color: #9a8860;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 
-/* Colonne image (centre-gauche) */
-.prize-row-img {
-  width: 118px; min-width: 118px;
-  height: 86px;
-  flex-shrink: 0;
+/* ── BANNIÈRE TOP 8 ── */
+.top8-banner {
+  margin-top: 14px;
+  padding: 7px 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: #c9a84c;
+  text-transform: uppercase;
+  text-align: center;
+  border-left: 3px solid #FFD700;
+  border-right: 3px solid #FFD700;
+  background: rgba(255,215,0,0.04);
+  border-radius: 4px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .podium { flex-direction: column; align-items: center; }
+  .reward-card--gold { transform: none; order: -1; }
+}
+
+/* ══ SPONSORS ══ */
+.sponsors-section {
+  padding: 12px 20px 16px;
+  border-top: 1px solid rgba(201,168,76,0.15);
+  margin-top: 8px;
+}
+.sponsors-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.sponsors-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(201,168,76,0.2);
+}
+.sponsors-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  color: #c9a84c;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  white-space: nowrap;
+}
+.sponsors-grid {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border-radius: 16px;
-  background: radial-gradient(circle at top, rgba(255,255,255,.05), rgba(10,7,1,.94));
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.08),
-    0 14px 28px rgba(0,0,0,.18);
-}
-.prize-row.champion .prize-row-img { width: 148px; height: 100px; }
-.prize-row-img img {
-  max-width: 100%; max-height: 100%;
-  object-fit: contain; object-position: center;
-  filter: brightness(1.02) contrast(1.1) saturate(1.15);
-  background: rgba(0,0,0,.12);
-}
-/* Deckbox 300 : l'emballage transparent est en haut — recadrer sur le produit */
-.prize-row.runner-up .prize-row-img img { object-position: center 72%; }
-
-/* Colonne info (droite) */
-.prize-row-info {
-  flex: 1; padding: 12px 16px;
-  background: transparent;
-  display: flex; flex-direction: column; justify-content: center;
-  border-left: 1px solid rgba(255,255,255,.06);
-}
-.prize-row-name {
-  font-family: 'Cinzel', serif; font-size: 12px; font-weight: 600;
-  color: var(--sand-light); line-height: 1.35;
-}
-.prize-row.champion .prize-row-name {
-  font-size: 13px; color: var(--gold-light);
-  filter: drop-shadow(0 0 6px rgba(200,150,12,.35));
-}
-.prize-row-brand {
-  font-family: 'Rajdhani', sans-serif; font-size: 10px;
-  color: rgba(200,150,12,.82); letter-spacing: 2px;
-  text-transform: uppercase; margin-top: 4px;
-}
-
-/* Top 8 */
-.top8-badge {
-  margin-top: 8px;
-  background: linear-gradient(135deg, rgba(200, 150, 12, .18), rgba(139, 105, 20, .12));
-  border: 1px solid rgba(255, 215, 0, .36);
-  padding: 6px 14px;
-  display: flex; align-items: center; gap: 8px; justify-content: center;
-  border-radius: 10px;
-}
-.top8-badge .badge-icon { font-size: 11px; color: var(--gold-light); }
-.top8-badge .badge-text {
-  font-family: 'Cinzel', serif; font-size: 11px;
-  color: var(--sand-light); font-weight: 700; letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-.top8-badge .badge-text strong { color: #FFD700; }
-
-/* ══ SPONSORS ══ */
-.sponsors-section { width: calc(100% - 56px); margin-top: 6px; }
-.sponsors-section .section-title { margin-bottom: 7px; }
-.sponsors-logos {
-  display: flex; align-items: center; justify-content: center;
-  gap: 14px; flex-wrap: wrap; padding: 7px 0;
-  border-top: 1px solid rgba(200,150,12,.20);
-  border-bottom: 1px solid rgba(200,150,12,.20);
+  flex-wrap: wrap;
+  gap: 16px 24px;
 }
 .sponsor-logo {
-  width: 90px; height: 44px;
-  display: flex; align-items: center; justify-content: center;
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: brightness(0.9);
+  transition: opacity 0.2s;
 }
-.sponsor-logo img {
-  width: 100%; height: 100%; object-fit: contain;
-  filter: grayscale(10%) brightness(0.92) contrast(1.05);
+.sponsor-logo:hover {
+  opacity: 1;
+  filter: brightness(1);
 }
-.wcq-logo-img {
-  height: 36px !important; width: auto !important;
+
+/* ── FOOTER ── */
+.footer-cta {
+  text-align: center;
+  padding: 8px 20px 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  color: #9a8860;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(201,168,76,0.1);
 }
+.footer-cta a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-cta a:hover { color: #FFD700; }
 .wcq-flag-img {
   height: 22px !important; width: auto !important;
 }
@@ -931,7 +984,7 @@ body {
     <div class="programme-section">
 
       <!-- JOUR 1 -->
-      <div class="day-card">
+      <div class="day-card day-card--j1">
         <div class="day-header">
           <span class="day-num">J1</span>
           <span class="day-title">1er Mai · Ouvert à Tous</span>
@@ -940,151 +993,133 @@ body {
 
         <div class="welcome-badge">Débutants bienvenus · Decks fournis</div>
 
-        <div class="prog-item">
-          <span class="prog-icon">◆</span>
-          <div class="prog-text">Jeux libres &amp; <strong>Bourse d'échange</strong>
-            <span class="time">Toute la journée</span>
-          </div>
+        <div class="j1-grid">
+          <div class="j1-item">🎮 <span>Jeux libres</span></div>
+          <div class="j1-item">🔄 <span>Bourse d'échange</span></div>
+          <div class="j1-item">⚔️ <span>Duels d'initiation</span></div>
+          <div class="j1-item">❓ <span>Quiz Yu-Gi-Oh!</span></div>
         </div>
-        <div class="prog-item">
-          <span class="prog-icon">◆</span>
-          <div class="prog-text"><strong>Atelier &amp; Duels d'initiation</strong>
-            <span class="time">A partir de 11h00</span>
-          </div>
+
+        <div class="j1-tournoi">
+          🏆 Tournoi ouvert &nbsp;·&nbsp; 14h00 – 17h00
         </div>
-        <div class="prog-item">
-          <span class="prog-icon">★</span>
-          <div class="prog-text"><strong>Quiz Yu-Gi-Oh!</strong>
-            <span class="time">Lots à gagner · Sur annonce</span>
-          </div>
+
+        <div class="j1-paf">
+          <span class="paf-label">Entrée</span>
+          <span class="paf-price">2 000 AR</span>
         </div>
-        <div class="prog-item">
-          <span class="prog-icon">★</span>
-          <div class="prog-text"><strong>Tournoi ouvert</strong>
-            <span class="time">14h00 — 17h00</span>
-          </div>
-        </div>
-        <div class="paf-badge">PAF Tournoi : 2 000 Ar</div>
       </div>
 
       <!-- JOUR 2 -->
-      <div class="day-card">
+      <div class="day-card day-card--j2">
         <div class="day-header">
           <span class="day-num">J2</span>
           <span class="day-title">2 Mai · Tournoi Principal</span>
         </div>
         <div class="day-divider"></div>
-        <div class="prog-item prog-highlight">
-          <span class="prog-icon">◆</span>
-          <div class="prog-text"><strong>Format OCG</strong> — Règles officielles</div>
+
+        <!-- Infos techniques -->
+        <div class="j2-meta">
+          <span>🃏 Format OCG</span>
+          <span class="j2-meta-sep">·</span>
+          <span>⚔️ 5 Rounds Swiss + Top Cut</span>
+          <span class="j2-meta-sep">·</span>
+          <span>🕙 10h00</span>
         </div>
-        <div class="prog-item prog-highlight prog-strong">
-          <span class="prog-icon">★</span>
-          <div class="prog-text"><strong>5 Rounds Swiss</strong> + Top Cut sans timer</div>
-        </div>
-        <div class="prog-item prog-note">
-          <span class="prog-icon">•</span>
-          <div class="prog-text"><strong>Début 10h00</strong></div>
-        </div>
-        <div class="prog-item prog-cta">
-          <span class="prog-icon">📌</span>
-          <div class="prog-text">Inscription sur <strong>www.ygomada.mg</strong></div>
-        </div>
+
+        <!-- Badge WCQ dominant -->
         <div class="wcq-badge">
-          <div class="wcq-top">
-            <img src="assets/wcq-logo.png" alt="WCQ" class="wcq-logo-img">
-            <div class="wcq-info">
+          <div class="wcq-inner">
+            <img src="assets/wcq-logo.png" alt="WCQ" class="wcq-icon">
+            <div class="wcq-text">
               <span class="wcq-tier">Tournoi Classé · Tier 3</span>
               <span class="wcq-title">Qualification WCQ State</span>
+              <span class="wcq-sub">Représentant Madagascar · Afrique du Sud</span>
             </div>
-            <img src="assets/flag-za.png" alt="Afrique du Sud" class="wcq-flag-img">
+            <img src="assets/flag-za.png" alt="" class="wcq-flag">
           </div>
-          <span class="wcq-sub">Représentant Madagascar · Afrique du Sud</span>
         </div>
-        <div class="paf-badge">PAF : 13 000 Ar</div>
+
+        <!-- Footer : CTA + PAF -->
+        <div class="j2-footer">
+          <a class="j2-cta" href="https://www.ygomada.mg" target="_blank">
+            🔗 Inscription : ygomada.mg
+          </a>
+          <div class="j2-paf">
+            <span class="paf-label">Entrée</span>
+            <span class="paf-price">13 000 AR</span>
+          </div>
+        </div>
       </div>
 
     </div>
 
     <!-- RÉCOMPENSES -->
-    <div class="prizing-section">
-      <div class="section-title">
-        <div class="line"></div>
-        <span class="crown">✦</span>
-        <span class="title-text">Récompenses</span>
-        <span class="crown">✦</span>
-        <div class="line"></div>
-      </div>
+    <section class="rewards-section">
+      <div class="rewards-title">✦ Récompenses ✦</div>
 
-      <div class="prizing-list">
+      <div class="podium">
 
-        <!-- CHAMPION -->
-        <div class="prize-row champion">
-          <div class="prize-row-rank">
-            <span class="prize-row-crown">♛</span>
-            <span class="prize-row-label">Champion</span>
-          </div>
-          <div class="prize-row-img">
-            <img src="assets/deckbox_premium.png" alt="Deckbox Premium Sanseking">
-          </div>
-          <div class="prize-row-info">
-            <div class="prize-row-name">Deckbox Premium · Cuir d'Agneau</div>
-            <div class="prize-row-brand">Sanseking</div>
+        <!-- Finaliste -->
+        <div class="reward-card reward-card--silver">
+          <div class="reward-rank">🥈 Finaliste</div>
+          <img src="assets/deckbox_300.png" alt="Deckbox 300+" class="reward-img">
+          <div class="reward-info">
+            <span class="reward-name">Deck Box 300+ · Triple compartiment</span>
+            <span class="reward-feature">Peut contenir 3 decks complets</span>
+            <span class="reward-brand">by Sanseking</span>
           </div>
         </div>
 
-        <!-- RUNNER-UP -->
-        <div class="prize-row runner-up">
-          <div class="prize-row-rank">
-            <span class="prize-row-label">Finaliste</span>
-          </div>
-          <div class="prize-row-img">
-            <img src="assets/deckbox_300.png" alt="Deckbox 300+ cartes">
-          </div>
-          <div class="prize-row-info">
-            <div class="prize-row-name">Deckbox 300+ Cartes</div>
-            <div class="prize-row-brand">Sanseking</div>
+        <!-- Champion -->
+        <div class="reward-card reward-card--gold">
+          <div class="reward-rank reward-rank--gold">🥇 Champion</div>
+          <img src="assets/deckbox_premium.png" alt="Deckbox Premium" class="reward-img">
+          <div class="reward-info">
+            <span class="reward-name">Deckbox PU Leather Sidewinder 100+</span>
+            <span class="reward-feature">Cuir d'agneau · Protection premium</span>
+            <span class="reward-brand">by Sanseking</span>
           </div>
         </div>
 
-        <!-- 3ÈME PLACE -->
-        <div class="prize-row third">
-          <div class="prize-row-rank">
-            <span class="prize-row-label">3e Place</span>
-          </div>
-          <div class="prize-row-img">
-            <img src="assets/sleeves.png" alt="60 Dual Sleeves">
-          </div>
-          <div class="prize-row-info">
-            <div class="prize-row-name">60 Dual Sleeves · Mountains &amp; Seas</div>
-            <div class="prize-row-brand">Sanseking</div>
+        <!-- 3e Place -->
+        <div class="reward-card reward-card--bronze">
+          <div class="reward-rank">🥉 3e Place</div>
+          <img src="assets/sleeves.png" alt="Sleeves Mountains & Seas" class="reward-img">
+          <div class="reward-info">
+            <span class="reward-name">Classic of Mountains &amp; Seas</span>
+            <span class="reward-feature">60 protèges-cartes · Dual layer</span>
+            <span class="reward-brand">by Sanseking</span>
           </div>
         </div>
 
       </div>
 
-      <!-- TOP 8 -->
-      <div class="top8-badge">
-        <span class="badge-icon">◆</span>
-        <span class="badge-text">Top 8 — <strong>Bon de réduction 5%</strong> · Prochaine commande</span>
+      <div class="top8-banner">
+        ✦ TOP 8 — Bon de réduction 5% · Prochaine commande
       </div>
-    </div>
+    </section>
 
     <!-- SPONSORS -->
-    <div class="sponsors-section">
-      <div class="section-title">
-        <div class="line"></div>
-        <span class="title-text">Partenaires &amp; Sponsors</span>
-        <div class="line"></div>
+    <section class="sponsors-section">
+      <div class="sponsors-title">
+        <span class="sponsors-line"></span>
+        <span class="sponsors-label">Partenaires &amp; Sponsors</span>
+        <span class="sponsors-line"></span>
       </div>
-      <div class="sponsors-logos">
-        <div class="sponsor-logo"><img src="assets/ikm.png"           alt="IKM Antsahavola"></div>
-        <div class="sponsor-logo"><img src="assets/aegyo (1).png"     alt="Aegyo"></div>
-        <div class="sponsor-logo"><img src="assets/mangaxmanga.png"   alt="Manga X Manga"></div>
-        <div class="sponsor-logo"><img src="assets/mega_madagame.png" alt="Mega Madagame"></div>
-        <div class="sponsor-logo"><img src="assets/Clikeko.png"       alt="Clikeko Store"></div>
-        <div class="sponsor-logo"><img src="assets/sanseking-1.png"   alt="Sanseking"></div>
+      <div class="sponsors-grid">
+        <img src="assets/ikm.png"           alt="IKM Antsahavola" class="sponsor-logo">
+        <img src="assets/aegyo (1).png"     alt="Aegyo"           class="sponsor-logo">
+        <img src="assets/mangaxmanga.png"   alt="Manga X Manga"   class="sponsor-logo">
+        <img src="assets/mega_madagame.png" alt="Mega Madagame"   class="sponsor-logo">
+        <img src="assets/Clikeko.png"       alt="Clikeko Store"   class="sponsor-logo">
+        <img src="assets/sanseking-1.png"   alt="Sanseking"       class="sponsor-logo">
       </div>
+    </section>
+
+    <div class="footer-cta">
+      📲 Actualités · Résultats · Communauté &nbsp;→&nbsp;
+      <a href="https://www.ygomada.mg" target="_blank">ygomada.mg</a>
     </div>
 
   </div>
